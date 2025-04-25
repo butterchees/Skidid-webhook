@@ -1,0 +1,123 @@
+body {
+  font-family: 'Courier New', monospace;
+  background: black;
+  color: #00ff00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.screen {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.screen.active {
+  display: block;
+  opacity: 1;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #00ff00;
+  width: 400px;
+  text-align: center;
+  border: 1px solid #00ff00;
+}
+
+h1, h2, p, label {
+  color: #00ff00;
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background: #111;
+  color: #00ff00;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #00ff00;
+}
+
+button {
+  background: #003300;
+  border: 1px solid #00ff00;
+  color: #00ff00;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background: #005500;
+  transform: scale(1.05);
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.tablink {
+  background: none;
+  border: none;
+  color: #00ff00;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.tablink.active {
+  color: #00ff00;
+  border-bottom: 2px solid #00ff00;
+  transform: scale(1.1);
+}
+
+.tabcontent {
+  display: none;
+}
+
+.tabcontent.active {
+  display: block;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.loading, .status {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #00ff00;
+}
+
+.info-box {
+  background: #111;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  max-height: 150px;
+  overflow-y: auto;
+  text-align: left;
+  border: 1px solid #00ff00;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
